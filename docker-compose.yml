@@ -1,0 +1,57 @@
+version: '3.3'
+services:
+  mysqldb:
+    image: mysql:8
+    restart: always
+    command: --max_allowed_packet=32505856
+    environment:
+      MYSQL_DATABASE: 'cov19'
+      MYSQL_USER: 'cov19'
+      MYSQL_PASSWORD: 'cov19pass'
+      MYSQL_ROOT_PASSWORD: 'vfASDf433dajhgbfieruwep23edefgregvFGfj'
+    volumes:
+      - ./mysql8_data:/var/lib/mysql
+    ports:
+      - '23306:3306'
+    networks:
+      - lamp
+
+  httpd:
+    # image: httpd:2.4
+    restart: always
+    ports:
+      - "8000:80"
+    build: ./build/httpd
+    volumes:
+      - ./:/app/
+    depends_on:
+      - php
+      - mysqldb
+    networks:
+      - lamp
+
+  php:
+    # image: php:8-fpm
+    restart: always
+    build: ./build/php
+    volumes:
+      - ./:/app/
+    depends_on:
+      - mysqldb
+    networks:
+      - lamp
+
+#  lb-nginx:
+#    image: nginx:lb
+#    restart: always
+#    build: ./build/nginx
+#    volumes:
+#      - ./build/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
+#    ports:
+#      - "8080:80"
+#    networks:
+#      - lamp
+
+networks:
+  lamp:
+#    driver: overlay
