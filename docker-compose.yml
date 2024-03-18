@@ -5,9 +5,9 @@ services:
     restart: always
     command: --max_allowed_packet=32505856
     environment:
-      MYSQL_DATABASE: 'cov19'
-      MYSQL_USER: 'cov19'
-      MYSQL_PASSWORD: 'cov19pass'
+      MYSQL_DATABASE: 'peanutbutterblog'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'userpass'
       MYSQL_ROOT_PASSWORD: 'vfASDf433dajhgbfieruwep23edefgregvFGfj'
     volumes:
       - ./mysql8_data:/var/lib/mysql
@@ -23,7 +23,7 @@ services:
       - "8000:80"
     build: ./build/httpd
     volumes:
-      - ./:/app/
+      - ./:/src/
     depends_on:
       - php
       - mysqldb
@@ -35,7 +35,7 @@ services:
     restart: always
     build: ./build/php
     volumes:
-      - ./:/app/
+      - ./:/src/
     depends_on:
       - mysqldb
     networks:
