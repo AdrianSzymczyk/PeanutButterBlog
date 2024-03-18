@@ -16,9 +16,7 @@
 <body>
   <header>
     <h1 class="site-heading text-center text-faded d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">Jedyne takie miejsce na świecie</span>
-      <span class="site-heading-upper text-primary mb-3">Blog założycieli największego sklepu masła orzechowego w Polsce</span>
-      <span class="site-heading-lower">Orzechowy Świat</span>
+      <span class="site-heading-lower">Akademix</span>
     </h1>
   </header>
   <!-- Navigation-->
