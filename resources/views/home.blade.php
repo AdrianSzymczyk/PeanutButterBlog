@@ -13,7 +13,7 @@
           <p class="mb-3">Nasza platforma to idealne miejsce dla studentów do wymiany notatek i materiałów edukacyjnych. 
             Tutaj możesz znaleźć pomoc w nauce, dzielić się swoimi zasobami oraz współpracować z innymi studentami z całego kraju. 
             Dołącz do naszej społeczności i zacznij dzielić się wiedzą już dziś!</p>
-          <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ route('posts') }}">Sprawdź posty!</a>
+          <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ route('posts.show') }}">Sprawdź posty!</a>
           </div>
         </div>
       </div>

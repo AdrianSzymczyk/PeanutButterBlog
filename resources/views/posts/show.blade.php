@@ -6,8 +6,8 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner bg-faded rounded">
-            <h2>Dodaj nową notatkę dla studenta</h2>
-            <p>Podziel się informacjami i uwagami dotyczącymi studentów</p>
+            <h2>Notatki naszych zdolnych studentów</h2>
+            <p>Tylko u nas takie perełki</p>
             <hr>
             @if ($posts->count())
             @foreach ($posts as $post)

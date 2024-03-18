@@ -7,7 +7,7 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner bg-faded rounded">
             <h2>Dodaj nową notatkę dla studenta</h2>
-            <p>Podziel się informacjami i uwagami dotyczącymi studentów</p>
+            <p>Podziel się swoimi notatkami z innymi studentami</p>
             <hr>
             <form action="{{ route('posts') }}" method='post'>
               @csrf

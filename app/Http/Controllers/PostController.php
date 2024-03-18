@@ -36,7 +36,8 @@ class PostController extends Controller
 
         $request->user()->posts()->create($request->only(['title', 'body']));
 
-        return back();
+        $posts = Post::latest()->with(['user', 'likes'])->paginate(10);
+        return view('posts.show', ['posts' => $posts]);
     }
 
     public function edit(Post $post){
