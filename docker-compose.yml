@@ -23,7 +23,7 @@ services:
       - "8000:80"
     build: ./build/httpd
     volumes:
-      - ./:/app/
+      - ./:/src/
     depends_on:
       - php
       - mysqldb
@@ -35,7 +35,7 @@ services:
     restart: always
     build: ./build/php
     volumes:
-      - ./:/app/
+      - ./:/src/
     depends_on:
       - mysqldb
     networks:
