@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner bg-faded rounded">
-            <h2>Wprowadź zmiany do swojego posta</h2>
+            <h2>Wprowadź zmiany do swojej notatki</h2>
             <hr>
             <form action='/posts/{{ $post->id }}' method='post'>
               @method('put')
@@ -19,7 +19,7 @@
                 @enderror
               </div>
               <div class="form-group test">
-                <label for="body"><b>Treść</b></label><br>
+                <label for="body"><b>Notatka</b></label><br>
                 <textarea class="form-control @error('body') border-red-500 @enderror" name="body" id="body" cols="30" rows="4" placeholder="Wylej swoje myśli i podziel się nimi z innymi..." style="width: 80%">{{ $post->body }}</textarea>
                 @error('body')
                   <div class="text-danger">{{ $message }}</div>

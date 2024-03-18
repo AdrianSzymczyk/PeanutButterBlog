@@ -7,19 +7,19 @@
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{URL::asset('images/getlstd-property-photo.jpg')}}" alt="..." />
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">Mocno orzechowe</span>
-            <span class="section-heading-lower">Jedyne takie masło</span>
+            <span class="section-heading-upper">Przybornik studenta</span>
+            <span class="section-heading-lower">Wszystkie notatki w jednym miejscu</span>
           </h2>
-          <p class="mb-3">Każda łyżka naszego wspaniałego masła orzechowego zaczyna się od ręcznie zbieranych
-            orzechów przez lokalnych dostawców. Po spróbowaniu nasze masło stanie się twoim ulubionym i bez wahania
-            polecisz je swoim znajomym!<br> Podziel się swoją opinią w zakładce POSTY.</p>
-          <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ route('findus') }}">Odwiedź nas dzis!</a>
+          <p class="mb-3">Nasza platforma to idealne miejsce dla studentów do wymiany notatek i materiałów edukacyjnych. 
+            Tutaj możesz znaleźć pomoc w nauce, dzielić się swoimi zasobami oraz współpracować z innymi studentami z całego kraju. 
+            Dołącz do naszej społeczności i zacznij dzielić się wiedzą już dziś!</p>
+          <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ route('posts') }}">Sprawdź posty!</a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="page-section cta">
+  <!-- <section class="page-section cta">
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; Your Website 2021</p>

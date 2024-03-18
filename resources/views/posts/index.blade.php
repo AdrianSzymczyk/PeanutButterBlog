@@ -6,8 +6,8 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner bg-faded rounded">
-            <h2>Chcesz powiedzieć za co kochasz masło orzechowe</h2>
-            <p>Napisz post i poznaj nowych miłośników masła orzechowego</p>
+            <h2>Dodaj nową notatkę dla studenta</h2>
+            <p>Podziel się informacjami i uwagami dotyczącymi studentów</p>
             <hr>
             <form action="{{ route('posts') }}" method='post'>
               @csrf
@@ -19,23 +19,14 @@
                 @enderror
               </div>
               <div class="form-group test">
-                <label for="body"><b>Treść</b></label><br>
+                <label for="body"><b>Notatka</b></label><br>
                 <textarea class="form-control @error('body') border-red-500 @enderror" name="body" id="body" value="{{old('body')}}" cols="30" rows="4" placeholder="Wylej swoje myśli i podziel się nimi z innymi..." style="width: 80%"></textarea>
                 @error('body')
                   <div class="text-danger">{{ $message }}</div>
                 @enderror
               </div>
-              <button type="submit" class="btn btn-primary skladanieZamowienia">Umieść post</button>
+              <button type="submit" class="btn btn-primary skladanieZamowienia">Dodaj notatkę</button>
             </form>
-            <hr>
-            @if ($posts->count())
-            @foreach ($posts as $post)
-              <x-post :post="$post"/>
-            @endforeach
-              {{ $posts->links() }}
-            @else
-              <p>Brak postów na blogu :(</p>
-            @endif
           </div>
         </div>
       </div>

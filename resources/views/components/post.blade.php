@@ -6,7 +6,7 @@
     <p class="my-2 ps-4">{{ $post->body }}</p>
     <div class='btn-group'>
         @can('edit', $post)
-            <a href="/posts/{{ $post->id }}/edit" class='btn btn-link'">Edytuj</a>
+            <a href="/posts/{{ $post->id }}/edit" class='btn btn-link'>Edytuj</a>
         @endcan
         @can('delete', $post)
             <form action='{{ route('posts.destroy', $post) }}' method='post' class="me-1">

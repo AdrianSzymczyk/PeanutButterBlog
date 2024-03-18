@@ -53,3 +53,8 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
+
+
+
+// @TODO: Naprawić edytowanie postów, ewentualnie usunąć możliwość edycji
+

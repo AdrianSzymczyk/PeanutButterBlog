@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="Sklep z masłami orzechowymi" />
   <meta name="author" content="Adrian Szymczyk" />
-  <title>Orzechowy świat - wszystkie masła orzechowe świata</title>
+  <title>Akademix - najlepsze notatki z twojej uczelni</title>
   <link rel="icon" type="image/x-icon" href="{{URL::asset('images/favicon.png')}}"/>
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -22,17 +22,16 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
   <div class="container">
-      <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Orzechowy Świat</a>
+      <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Akademix</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('home') }}">Strona główna</a></li>
-          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('about') }}">O nas</a></li>
-          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('products') }}" id="productsSite">Produkty</a></li>
-          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts') }}">Posty</a></li>
-          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('findus') }}">Znajdź nas</a></li>
+          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts') }}">Dodaj notatke</a></li>
+          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts.show') }}">Notatki</a></li>
+          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts') }}">Ranking</a></li>
           @auth
             <li class="nav-item px-lg-2 "><a class="nav-link" href="{{ route('dashboard') }}"><i class="far fa-user"></i> {{ auth()->user()->username }}</a></li>
             <li class="nav-item px-lg-3">
