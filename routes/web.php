@@ -57,3 +57,5 @@ Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.
 Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
+// Added route for showing posts ranked by likes
+Route::get('/posts/ranked', [PostController::class, 'showRanked'])->name('posts.ranked');
