@@ -31,7 +31,7 @@
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('home') }}">Strona główna</a></li>
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts') }}">Dodaj notatke</a></li>
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts.show') }}">Notatki</a></li>
-          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts') }}">Ranking</a></li>
+          <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts.ranked') }}">Ranking</a></li>
           @auth
             <li class="nav-item px-lg-2 "><a class="nav-link" href="{{ route('dashboard') }}"><i class="far fa-user"></i> {{ auth()->user()->username }}</a></li>
             <li class="nav-item px-lg-3">

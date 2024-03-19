@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -65,5 +66,14 @@ class PostController extends Controller
         $this->authorize('delete', $post);
         $post->delete();
         return back();
+    }
+
+    public function showRanked()
+    {
+        $posts = Post::withCount('likes')
+                     ->orderBy('likes_count', 'desc')
+                     ->get();
+
+        return view('posts.ranked', compact('posts'));
     }
 }
