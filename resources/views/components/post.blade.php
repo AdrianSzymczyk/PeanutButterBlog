@@ -29,6 +29,6 @@
                 </form>
             @endif
         @endauth
-        <p class="ps-2" style='margin-top: 0.3rem'>{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</p>
+        <p class="ps-2" style='margin-top: 0.3rem; font-weight: bold; color: #606C38;'>{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</p>
     </div>
 </div>

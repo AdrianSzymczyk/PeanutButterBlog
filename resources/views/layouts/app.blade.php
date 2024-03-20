@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Sklep z masłami orzechowymi" />
-  <meta name="author" content="Adrian Szymczyk" />
+  <meta name="description" content="Portla z notatkami studentów" />
   <title>Akademix - najlepsze notatki z twojej uczelni</title>
   <link rel="icon" type="image/x-icon" href="{{URL::asset('images/favicon.png')}}"/>
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -33,7 +32,7 @@
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts.show') }}">Notatki</a></li>
           <li class="nav-item px-lg-3"><a class="nav-link text-uppercase" href="{{ route('posts.ranked') }}">Ranking</a></li>
           @auth
-            <li class="nav-item px-lg-2 "><a class="nav-link" href="{{ route('dashboard') }}"><i class="far fa-user"></i> {{ auth()->user()->username }}</a></li>
+            <li class="nav-item px-lg-2 "><a class="nav-link" href="{{ route('users.dashboard', auth()->user()) }}"><i class="far fa-user"></i> {{ auth()->user()->username }}</a></li>
             <li class="nav-item px-lg-3">
               <form action="{{route('logout')}}" method="post">
                 @csrf
@@ -42,7 +41,6 @@
             </li>
           @endauth
           @guest
-            <li class="nav-item px-lg-0"><a class="nav-link text-uppercase" href="{{ route('dashboard') }}"><i class="fas fa-align-left"></i> Profil</a></li>
             <li class="nav-item px-lg-2"><a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Login</a></li>
             <li class="nav-item px-lg-3"><a class="btn btn-primary ml-lg-3" href="{{route('register')}}">Register</a></li>
           @endguest

@@ -34,7 +34,7 @@ Route::get('/findus', function () {
 })->name('findus');
 
 
-Route::get('/dashboard', [DashboardController::class, 'index']) ->name('dashboard');
+Route::get('/user/dashboard/{user}', [UserPostController::class, 'account'])->name('users.dashboard');
 
 Route::get('/users/{user}', [UserPostController::class, 'index']) ->name('users.posts');
 
