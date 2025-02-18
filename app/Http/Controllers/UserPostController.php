@@ -16,4 +16,14 @@ class UserPostController extends Controller
             'posts' => $posts
         ]);
     }
+
+    public function account(User $user)
+    {
+        $posts = $user->posts()->with(['user', 'likes'])->paginate(10);
+
+        return view('users.dashboard', [
+            'user' => $user,
+            'posts' => $posts
+        ]);
+    }
 }

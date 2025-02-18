@@ -76,4 +76,18 @@ class PostController extends Controller
 
         return view('posts.ranked', compact('posts'));
     }
+
+    public function dashboard(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        $request->user()->posts()->create($request->only(['title', 'body']));
+
+        $posts = Post::latest()->with(['user', 'likes'])->paginate(10);
+
+        return view('/dashboard', ['posts' => $posts]);
+    }
 }
