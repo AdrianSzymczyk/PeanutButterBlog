@@ -7,7 +7,7 @@
         <div class="col-xl-9 mx-auto">
           <div class='cta-inner2  '>
             <h1 class=''>{{ $user->name}}</h1>
-            <p>Umieścił {{ $posts->count() }} {{ Str::plural('posts', $posts->count()) }} oraz otrzymał {{ $user->receivedLikes->count() }} likeow</p>
+            <p>Umieścił {{ $posts->count() }} notatki oraz otrzymał {{ $user->receivedLikes->count() }} polubień</p>
           </div>
           <div class="cta-inner bg-faded rounded">
             @if ($posts->count())

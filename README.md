@@ -5,3 +5,6 @@ How to run application on your local machine :v
 1. composer install
 2. npm install
 3. .env 
+
+http://localhost/PeanutButterBlog/public/
+

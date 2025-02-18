@@ -19,16 +19,16 @@
             @if(!$post->likedBy(auth()->user()))
                 <form action='{{ route('posts.likes', $post) }}' method='post' class="me-1">
                 @csrf
-                <button type='submit' class='btn btn-link'>Like</button>
+                <button type='submit' class='btn btn-link'>Daj ❤</button>
                 </form>
             @else
                 <form action='{{ route('posts.likes', $post) }}' method='post' class="me-1">
                     @csrf
                     @method('DELETE')
-                    <button type='submit' class='btn btn-link'>Unlike</button>
+                    <button type='submit' class='btn btn-link'>Zabierz ❤</button>
                 </form>
             @endif
         @endauth
-        <p class="ps-2" style='margin-top: 0.3rem'>{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</p>
+        <p class="ps-2" style='margin-top: 0.3rem'>{{ $post->likes->count() }} ❤</p>
     </div>
 </div>
